@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 const Home = () => {
 
     const [data,setData] = useState('');
+
     useEffect(()=>{
         fetch('/allblogs', {
             method: 'get',
@@ -15,7 +16,6 @@ const Home = () => {
             setData(result);
         });
     },[])
-
 
     return (
         <div className="grid-container">
